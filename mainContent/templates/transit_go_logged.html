@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block div %}
+        <div class="top_nav">
+            <div class="Main_dropdown hover">
+              <a href="{% url 'user_profile' %}"><span class="material-symbols-outlined" style="font-size: 30px">person</span></a>
+              <ul>
+                <li><a href="{% url 'user_profile' %}">Mój profil</a></li>
+                <li><a href="{% url 'tickets' %}">Bilety</a></li>
+				<li><a href="{% url 'favorite_BusStop' %}">Historia przejazdów</a></li>
+				<li><a href="{% url 'favorite_BusStop' %}">Ulubione przystanki</a></li>
+                <li>
+                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Wyloguj</a>
+                     <form id="logout-form" method="post" action="{% url 'logout' %}">
+                         {% csrf_token %}
+                     </form>
+                 </li>
+              </ul>
+            </div>
+        </div>
+{% endblock %}
+
+{% block foot%}
+	<footer>
+		<div class="dropdown hover">
+			<a href="#">Pomoc</a>
+			<ul>
+				<li><a href="{% url 'report' %}">Zgłoś błąd</a></li>
+				<li><a href="{% url 'contact_us' %}">Skontakuj się z nami</a></li>
+			</ul>
+		</div>
+	</footer>
+{%endblock%}

@@ -1,0 +1,209 @@
+{% load static %}
+body{
+    background-image: url('/static/images/tlo.png');
+    background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+
+main{
+    width: 100%;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pojemnik_reg{
+	padding: 30px;
+	background-color: #fff;
+	border: 2px solid #6883BB;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: auto;
+}
+
+#logo_reg{
+    width: 320px;
+    height: 60px;
+}
+
+.Back_link{
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+/*Formularz*/
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 350px;
+}
+
+.group{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 300px;
+	margin-bottom: 35px;
+}
+
+.groupLine{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 300px;
+	margin-bottom: 35px;
+}
+
+.group:last-child{
+	margin-bottom: 15px;
+}
+
+/*Input tel*/
+.input_tel{
+    font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	margin-left: 0px;
+	display: block;
+	width: 185px;
+	border: none;
+	border-bottom: 1px solid #6883BB;
+	box-sizing: border-box;
+	color: #5264AE;
+}
+
+.bar_tel{
+	position: relative;
+	display: block;
+	width: 150px;
+}
+
+/*Select klient, kierowca*/
+#role{
+    margin-top: 21px;
+    padding: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #6883BB;
+    border-radius: 3px;
+    width: 90px;
+    color: #5264AE;
+}
+
+#role:focus {
+    outline: none;
+    border-color: #6883BB;
+}
+
+/*Rest inputs*/
+input{
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 300px;
+	border: none;
+	border-bottom: 1px solid #6883BB;
+	box-sizing: border-box;
+	color: #5264AE;
+}
+
+input:focus{
+	outline: none;
+}
+
+label{
+	color: #6883BB;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	font-weight: bold;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label{
+	top: -20px;
+	font-size: 14px;
+	color: #5264AE;
+}
+
+.bar{
+	position: relative;
+	display: block;
+	width: 300px;
+}
+
+.bar:before, .bar:after{
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #5264AE;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.bar:before{
+	left:50%;
+}
+
+.bar:after{
+	right:50%;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+}
+
+/*Submit button*/
+button{
+	width: 300px;
+	height: 45px;
+	border-radius: 15px;
+	border: 2px solid #6883BB;
+	font-size: 18px;
+	font-weight: bold;
+	color: #5264AE;
+	background-color: #FFF;
+	transition: background-color 0.7s ease;
+	transition: color 0.7s ease;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: #5264AE;
+	border: none;
+	-webkit-box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	color: #FFF;
+}
+
+.Link{
+	margin: 4px 0;
+	text-decoration: none;
+	color: #6883BB;
+	font-weight: 700;
+	transition: background-color 0.2s ease;
+	transition: color 0.2s ease;
+}
+
+.Link:hover{
+	color: #5264AE;
+	text-decoration: underline;
+}

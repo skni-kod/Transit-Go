@@ -1,0 +1,19 @@
+{% extends 'user_profile.html' %}
+{%load static%}
+
+
+{% block unlogged_content %}
+    <section id="container">
+        <section id="content">
+            <header>
+                <h2>Zgłoszenie</h2>
+                <a href="{% url 'base'%}">Powrót</a>
+            </header>
+            <div class="container">
+                <section id="report_text">
+                    <span style="font-size: xx-large"><h1>   "Dziękujemy za zgłoszenie!"</h1></span>
+                </section>
+            </div>
+        </section>
+    </section>
+{% endblock %}

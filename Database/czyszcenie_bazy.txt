@@ -1,0 +1,38 @@
+DROP TABLE IF EXISTS veh_feature_traveler;
+
+DROP TABLE IF EXISTS trav_ride;
+DROP TABLE IF EXISTS traveler;
+
+DROP TABLE IF EXISTS course_stage;
+DROP TABLE IF EXISTS opinion;
+
+DROP TABLE IF EXISTS course;
+
+DROP TABLE IF EXISTS bus_stops_dist;
+DROP TABLE IF EXISTS bus_stops_time;
+DROP TABLE IF EXISTS search_history;
+DROP TABLE IF EXISTS client_bus_stop;
+DROP TABLE IF EXISTS vehicle_veh_feature;
+DROP TABLE IF EXISTS driver_vehicle;
+DROP TABLE IF EXISTS work_schedule;
+DROP TABLE IF EXISTS tickets_client;
+
+DROP TABLE IF EXISTS bus_stop;
+DROP TABLE IF EXISTS vehicle;
+DROP TABLE IF EXISTS veh_feature;
+DROP TABLE IF EXISTS client;
+DROP TABLE IF EXISTS driver;
+DROP TABLE IF EXISTS simulation;
+DROP TABLE IF EXISTS tickets;
+DROP TABLE IF EXISTS raports;
+
+DROP TABLE IF EXISTS auth_group_permissions;
+DROP TABLE IF EXISTS auth_group;
+DROP TABLE IF EXISTS auth_user_groups;
+DROP TABLE IF EXISTS authtoken_token;
+DROP TABLE IF EXISTS auth_permission;
+DROP TABLE IF EXISTS django_admin_log;
+DROP TABLE IF EXISTS django_content_type;
+DROP TABLE IF EXISTS django_migrations;
+DROP TABLE IF EXISTS django_session;
+DROP TABLE IF EXISTS "user";

@@ -1,0 +1,27 @@
+{% extends 'user_profile.html' %}
+{%load static%}
+
+{% block unlogged_content %}
+    <section id="container" style="justify-content: center;">
+        <section id="content">
+            <header>
+                <h2>Zgłoś błąd</h2>
+                <a href="{% url 'base'%}">Powrót</a>
+            </header>
+            <div class="container">
+                <section id="report_head">
+                    <h2>Napisz nam o zaistniałym błędzie:</h2>
+                 </section>
+                <section id="report_text">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                          <p style="text-align: center">
+                            <button type="submit" class="btn btn-primary">Wyślij zgłoszenie</button>
+                          </p>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>TransitGo</title>
+
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1"/>
+
+	<link rel="stylesheet" href="{% static 'css/log_style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/media.css' %}"/>
+</head>
+<body>
+
+	<main>
+		<div class="pojemnik">
+			<img src="{% static 'images/TransitGo.png' %}" alt="TransitGo" width="250px" height="250px" id="logo"/>
+			<form id="Form_log" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+				<div class="group">
+				    <input type="text" name="username" required>
+				    <span class="highlight"></span>
+				    <span class="bar"></span>
+				    <label>Username</label>
+				</div>
+
+				<div class="group">
+				    <input type="password" name="password" required>
+				    <span class="highlight"></span>
+				    <span class="bar"></span>
+					<label>Hasło</label>
+				</div>
+
+				<div class="group">
+				    <button type="submit">Zaloguj się</button>
+					{% if error %}
+					<ul class="Error_list">
+						<li><a href="{% url 'login' %}">{{ error }} <span class="try_again">Spróbuj ponownie</span></a></li>
+					</ul>
+					{% endif %}
+				</div>
+			</form>
+			<a href="{% url 'register' %}" class="Link">Zarejestruj się</a>
+			<a href="{% url 'reset_password' %}" class="Link">Przypomnij hasło</a>
+		</div>
+	</main>
+
+</body>
+</html>

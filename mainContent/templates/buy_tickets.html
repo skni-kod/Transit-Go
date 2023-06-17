@@ -1,0 +1,39 @@
+{% extends 'user_profile.html' %}
+{% load static %}
+
+{% block dane %}
+    <section id="content">
+        <header>
+            <h2>Co to są? Bilety? O! Bilety!</h2>
+            <a href="{% url 'TransitGoLogged'%}">Powrót</a>
+        </header>
+        <section id="buy_tickets_info">
+            <div class="ticket_option">
+                <form method="POST" action="{% url 'buy_tickets' %}">
+                    {% csrf_token %}
+                    <article class="ticket_type"> Miesięczny </article>
+                    <section class="buy_ticket">Bilet ważny do: {% if monthly_ticket_date %}{{ monthly_ticket_date }}{% else %}brak{% endif %}</section>
+                    <section class="buy_ticket"><button class="buy" name="buy_monthly_ticket">Kup bilet na następny miesiąc. </button></section>
+                </form>
+            </div>
+
+            <div class="ticket_option">
+                <form method="POST" action="{% url 'buy_tickets' %}">
+                    {% csrf_token %}
+                    <article class="ticket_type"> Jednorazowy </article>
+                    <section class="buy_ticket">Ilość dostępnych biletów jednorazowych: {{ liczba_biletow_jednorazowych }}</section>
+                    <section class="buy_ticket"><button class="buy" name="buy_jednorazowy">Kup bilet jednorazowy</button></section>
+                </form>
+            </div>
+            <div class="ticket_option">
+                <form>
+                    <article class="ticket_type"> Miesięczny </article>
+                    <section class="buy_ticket">1</section>
+                    <section class="buy_ticket">2</section>
+                    <section class="buy_ticket">3</section>
+                    <section class="buy_ticket"><button class="buy">Kup bilet</button></section>
+                </form>
+            </div>
+        </section>
+    </section>
+{% endblock %}

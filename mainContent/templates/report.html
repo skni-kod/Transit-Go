@@ -1,0 +1,22 @@
+{% extends 'user_profile.html' %}
+{% load static %}
+
+{% block dane %}
+    <section id="content">
+        <header>
+            <h2>Zgłaszanie błędu</h2>
+            <a href="{% url 'TransitGoLogged'%}">Powrót</a>
+        </header>
+        <article id="report_container" style="width: 100%">
+            <section id="report_head">
+                <h2>Napisz nam o zaistniałym błędzie:</h2>
+            </section>
+            <section id="report_text">
+                <textarea id="report_opinion" rows="16" cols="75" placeholder="Pisz smiało!"></textarea>
+            </section>
+            <section id="send_submit">
+                <button type="submit" id="send_report">Wyślij raport</button>
+            </section>
+        </article>
+    </section>
+{% endblock %}

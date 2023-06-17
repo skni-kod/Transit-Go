@@ -1,0 +1,782 @@
+{% load static %}
+/*Profil*/
+body{
+    background-image: url('/static/images/tlo.png');
+	background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+#container{
+    width: 1200px;
+    height: 600px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+aside{
+    width: 20%;
+    max-height: 315px;
+    padding: 0 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #5264AE;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 25px 0px #466199;
+    -moz-box-shadow: 0px 0px 25px 0px #466199;
+    box-shadow: 0px 0px 25px 0px #466199;
+}
+
+.group{
+    margin-top: 15px;
+}
+
+.group > ul{
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.group > ul a{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.group > ul a:hover{
+    color: #DDD;
+}
+
+.group > ul > a > h2{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.group h2::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-bottom: 3px;
+    margin-left: 2px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.group > ul > li{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.group > ul > li > a{
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: #fff;
+    border: 2px solid #6883BB;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 25px 0px #466199;
+    -moz-box-shadow: 0px 0px 25px 0px #466199;
+    box-shadow: 0px 0px 25px 0px #466199;
+}
+
+#content header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 15px;
+    border-bottom: 2px solid #6883BB;
+    color: #5264AE;
+}
+
+#content header > h2{
+    margin: 0;
+    padding: 0;
+}
+
+#content header > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #5264AE;
+}
+
+#content header > a:hover{
+    color: #30428C;
+}
+
+#content header > a::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-bottom: 1px;
+    margin-left: 2px;
+    border-top: 2px solid #5264AE;
+    border-right: 2px solid #5264AE;
+    transform: rotate(45deg);
+}
+
+#account_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+#user_icon{
+    display: flex;
+    margin-top: 25px;
+}
+
+#change_info{
+    margin-bottom: 5px;
+}
+
+#change_info a{
+    color: #5264AE;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info_list{
+    line-height: 50px;
+    color: #5264AE;
+    font-weight: bold;
+}
+
+.info_list > span{
+    margin: 0 25px 0 0;
+    padding: 0;
+}
+
+/*Bilety*/
+#tickets_info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tickets_option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 250px;
+    border: 2px solid #6883BB;
+    border-radius: 2px;
+    margin: 0 20px;
+    background-color: #6375BF;
+    -webkit-box-shadow: 0px 0px 10px 0px #466199;
+    -moz-box-shadow: 0px 0px 10px 0px #466199;
+    box-shadow: 0px 0px 10px 0px #466199;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: background-color 0.4s ease;
+}
+
+.tickets_option:hover{
+    background-color: #5264AE;
+    border: 2px solid #5772AA;
+    -webkit-box-shadow: 0px 0px 10px 0px #355088;
+    -moz-box-shadow: 0px 0px 10px 0px #355088;
+    box-shadow: 0px 0px 10px 0px #355088;
+}
+
+.background_img{
+    width: 140px;
+    height: 120px;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 0;
+}
+
+.tickets_option > p{
+   z-index: 100;
+}
+
+/*Historia przejazdów*/
+#trip_content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#trip_heading{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+#trip_heading > h2{
+    margin: 0;
+    padding-left: 15px;
+    font-size: 24px;
+    color: #5264AE;
+}
+
+#info_content{
+    display: flex;
+    height: 100%;
+    padding-bottom: 25px;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#info_content::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 2px;
+}
+
+#info_content::-webkit-scrollbar-thumb {
+    background-color: #6883BB;
+    border-radius: 6px;
+}
+
+#info_content::-webkit-scrollbar-thumb:hover {
+    background-color: #5772AA;
+}
+
+#info_content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+
+#XD{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 97%;
+}
+
+.trip_info{
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #466199;
+    border-radius: 4px;
+    margin: 10px 0;
+    color: #5264AE;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-box-shadow: 0px 0px 4px 0px #355088;
+    -moz-box-shadow: 0px 0px 4px 0px #355088;
+    box-shadow: 0px 0px 4px 0px #355088;
+}
+
+.trip_info:first-child{
+    margin-top: 5px;
+}
+
+.JD_L{
+    display: flex;
+    width: 42%;
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #466199;
+}
+
+.JD_C{
+    display: flex;
+    width: 7%;
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #466199;
+}
+
+.JD_P{
+    display: flex;
+    width: 17%;
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #6883BB;
+    color: #fff;
+    transition: background-color 0.4s ease;
+}
+
+.JD_P:hover{
+    background-color: #466199;
+}
+
+/*Zmiana hasła*/
+#change_pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+#form_ch_pass{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.group_change{
+    position: relative;
+	margin-bottom: 35px;
+}
+
+.group_change:last-child{
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input{
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 300px;
+	border: none;
+	border-bottom: 1px solid #6883BB;
+	box-sizing: border-box;
+	color: #5264AE;
+}
+
+input:focus{
+	outline: none;
+}
+
+label{
+	color: #6883BB;
+	font-size: 18px;
+	position: absolute;
+	pointer-events: none;
+	font-weight: bold;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label{
+	top: -20px;
+	font-size: 14px;
+	color: #5264AE;
+}
+
+.bar{
+	position: relative;
+	display: block;
+	width: 300px;
+}
+
+.bar:before, .bar:after{
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #5264AE;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.bar:before{
+	left:50%;
+}
+
+.bar:after{
+	right:50%;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+}
+
+button{
+	width: 300px;
+	height: 45px;
+	border-radius: 15px;
+	border: 2px solid #6883BB;
+	font-size: 18px;
+	font-weight: bold;
+	color: #5264AE;
+	background-color: #FFF;
+	transition: background-color 0.7s ease;
+	transition: color 0.7s ease;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: #5264AE;
+	border: none;
+	-webkit-box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	color: #FFF;
+	font-weight: bold;
+}
+
+/*Ulubione przystanki*/
+#Fav_heading{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+#Fav_heading > h2{
+    margin: 0;
+    padding-left: 35px;
+    font-size: 24px;
+    color: #5264AE;
+}
+
+#Fav_content{
+    display: flex;
+    height: 100%;
+    padding-bottom: 25px;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#Fav_content::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 2px;
+}
+
+#Fav_content::-webkit-scrollbar-thumb {
+    background-color: #6883BB;
+    border-radius: 6px;
+}
+
+#Fav_content::-webkit-scrollbar-thumb:hover {
+    background-color: #5772AA;
+}
+
+#Fav_content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+
+#Bus_container{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 70%;
+}
+
+.Fav_BusStop{
+    display: flex;
+    width: 75%;
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #466199;
+}
+
+.Idz_pieszo{
+display: flex;
+    width: 25%;
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #6883BB;
+    color: #fff;
+    transition: background-color 0.4s ease;
+}
+
+.Idz_pieszo:hover{
+    background-color: #466199;
+}
+
+/*Zgloś błąd*/
+#report_container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#report_head{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+#report_head > h2{
+    margin: 0;
+    padding-left: 10px;
+    color: #5264AE;
+}
+
+#report_text{
+    display: flex;
+    justify-content: center;
+}
+
+#report_opinion{
+    margin-top: 5px;
+    resize: none;
+    border-radius: 4px;
+    border: 2px solid #6883BB;
+    font-size: 18px;
+    color: #5264AE;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 0px 4px 0px rgba(66, 68, 90, 1);
+	box-shadow: 0px 0px 4px 0px rgba(66, 68, 90, 1);
+}
+
+#report_opinion:focus{
+    outline: none;
+    border: 2px solid #466199;
+}
+
+#report_opinion::placeholder{
+    color: #5264AE;
+}
+
+#send_submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+#send_report{
+    width: 200px;
+}
+
+/*Zgłoś błąd niezalogowany użytkownik*/
+#content_unlog{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #fff;
+    border: 2px solid #6883BB;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 25px 0px #466199;
+    -moz-box-shadow: 0px 0px 25px 0px #466199;
+    box-shadow: 0px 0px 25px 0px #466199;
+    padding-bottom: 20px;
+}
+
+#content_unlog header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 15px;
+    border-bottom: 2px solid #6883BB;
+    color: #5264AE;
+}
+
+#content_unlog header > h2{
+    margin: 0;
+    padding: 0;
+}
+
+#content_unlog header > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #5264AE;
+}
+
+#content_unlog header > a:hover{
+    color: #30428C;
+}
+
+#content_unlog header > a::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-bottom: 1px;
+    margin-left: 2px;
+    border-top: 2px solid #5264AE;
+    border-right: 2px solid #5264AE;
+    transform: rotate(45deg);
+}
+
+/*Regulamin*/
+#container_regulations{
+    width: 1200px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content_regulation{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-height: 100vh;
+    overflow-y: hidden;
+    background-color: #fff;
+    border: 2px solid #6883BB;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 25px 0px #466199;
+    -moz-box-shadow: 0px 0px 25px 0px #466199;
+    box-shadow: 0px 0px 25px 0px #466199;
+}
+
+#content_regulation header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 15px;
+    border-bottom: 2px solid #6883BB;
+    color: #5264AE;
+}
+
+#content_regulation header > h2{
+    margin: 0;
+    padding: 0;
+}
+
+#content_regulation header > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #5264AE;
+}
+
+#content_regulation header > a:hover{
+    color: #30428C;
+}
+
+#content_regulation header > a::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-bottom: 1px;
+    margin-left: 2px;
+    border-top: 2px solid #5264AE;
+    border-right: 2px solid #5264AE;
+    transform: rotate(45deg);
+}
+
+#container_regulation{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15px 20px;
+}
+
+#container_regulation h2{
+    margin: 0;
+    padding: 0;
+    color: #5264AE;
+}
+
+#container_regulation p{
+    margin: 5px 0 10px 15px;
+}
+
+.wyloguj{
+    display: block;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+#buy_tickets_info{
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.ticket_option{
+    width: 230px;
+    margin: 40px 20px;
+    border: 2px solid #5264AE;
+    border-radius: 4px;
+}
+
+.ticket_type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    height: 50px;
+    padding: 0 5px;
+    border-bottom: 3px solid #6883BB;
+    color: #5264AE;
+    border-radius: 5px;
+}
+
+.buy_ticket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-bottom: 3px solid #6883BB;
+    border-radius: 5px;
+}
+
+.buy_ticket:last-child{
+    border-bottom: none;
+}
+
+.buy{
+    background-color: #fff;
+    font-weight: bold;
+    color: #5264AE;
+    margin-top: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #6883BB;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #FFF;
+    transition: none;
+    transition: none;
+}
+
+.buy:hover{
+    cursor: pointer;
+	background-color: #fff;
+	border-bottom: 3px solid #6883BB;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: #5264AE;
+}

@@ -1,0 +1,69 @@
+{% extends 'trip_history.html' %}
+{% load static %}
+
+{% block dla_histori %}
+    <section id="content">
+        <header>
+            <h2>Ulubione przystani</h2>
+            <a href="{% url 'TransitGoLogged' %}">Powrót</a>
+        </header>
+        <article id="trip_content">
+            <section id="Fav_heading">
+                <h2>Moje przystanki:</h2>
+            </section>
+            <section id="Fav_content">
+                <div id="Bus_container">
+
+                    <form method="POST" action="{% url 'favorite_BusStop' %}">
+                        {% csrf_token %}
+
+                        <div style="padding-top: 10px">
+
+
+                            <input type="text" id="nameOfFavPlace" name="nameOfFavPlace">
+                        </div>
+                        <div style="padding-top: 10px">
+
+                            <select id="przystanki" name="przystanki">
+                                {% for przystanek in przystanki %}
+                                    <option value="{{ przystanek.id_bus_stop }}">{{ przystanek.city }}, {{ przystanek.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <button type="submit" onclick="dodajPrzystanek()">Dodaj przystanek</button>
+                    </form>
+
+
+
+                    {% if user.is_authenticated %}
+                        {% if rekordy %}
+                            {% for rekord in rekordy %}
+                                {% if rekord.id_client.id_client == user.id_user %}
+                                    <div class="trip_info">
+                                        <div class="Fav_BusStop">{{ rekord.name }}</div>
+                                        <a href="" class="Idz_pieszo">Idź do przystanku</a>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <p>Brak ulubionych przystanków.</p>
+                        {% endif %}
+                    {% else %}
+                        <p>Zaloguj się, aby zobaczyć ulubione przystanki.</p>
+                    {% endif %}
+
+
+
+                    <div style="padding-top: 10px"></div>
+                </div>
+            </section>
+            <section>
+
+
+            </section>
+        </article>
+    </section>
+
+    <script src="{% static 'js/favorite_bus_stop.js' %}"></script>
+{% endblock %}

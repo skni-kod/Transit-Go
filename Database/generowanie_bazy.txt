@@ -1,0 +1,389 @@
+
+CREATE TABLE bus_stop (
+    id_bus_stop NUMERIC(4) NOT NULL,
+    code_stop   VARCHAR(5) NOT NULL,
+    city        VARCHAR(100) NOT NULL,
+    name        VARCHAR(100) NOT NULL,
+    gps_n       NUMERIC(18,9) NOT NULL,
+    gps_e       NUMERIC(18,9) NOT NULL,
+    loop        NUMERIC(1) NOT NULL,
+    wait_time   NUMERIC(5),
+    charger_kw  NUMERIC(5) NOT NULL
+);
+
+ALTER TABLE bus_stop ADD CONSTRAINT bus_stop_pk PRIMARY KEY ( id_bus_stop );
+
+CREATE TABLE bus_stops_dist (
+    id_bus_stops_dist NUMERIC(4) NOT NULL,
+    id_bus_stop_start NUMERIC(4) NOT NULL,
+    id_bus_stop_end   NUMERIC(4) NOT NULL,
+    distance          NUMERIC(4) NOT NULL,
+    day_of_week       VARCHAR(15) NOT NULL,
+    hour              TIMESTAMP(2) NOT NULL
+);
+
+ALTER TABLE bus_stops_dist ADD CONSTRAINT bus_stops_dist_pk PRIMARY KEY ( id_bus_stops_dist );
+
+CREATE TABLE bus_stops_time (
+    id_bus_stops_time NUMERIC(4) NOT NULL,
+    id_bus_stop_start NUMERIC(4) NOT NULL,
+    id_bus_stop_end   NUMERIC(4) NOT NULL,
+    day_of_week       VARCHAR(15) NOT NULL,
+    hour              TIMESTAMP(2) NOT NULL,
+    time              NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE bus_stops_time ADD CONSTRAINT bus_stops_time_pk PRIMARY KEY ( id_bus_stops_time );
+
+CREATE TABLE client (
+    id_client    NUMERIC(4) NOT NULL,
+    user_id_user NUMERIC(4) NOT NULL
+);
+
+CREATE UNIQUE INDEX client__idx ON
+    client (
+        user_id_user
+    ASC );
+
+ALTER TABLE client ADD CONSTRAINT client_pk PRIMARY KEY ( id_client );
+
+CREATE TABLE client_bus_stop (
+    id_fav_place NUMERIC(4) NOT NULL,
+    name         VARCHAR(30) NOT NULL,
+    id_bus_stop  NUMERIC(4) NOT NULL,
+    id_client    NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE client_bus_stop ADD CONSTRAINT client_bus_stop_pk PRIMARY KEY ( id_fav_place );
+
+CREATE TABLE course (
+    id_course         NUMERIC(4) NOT NULL,
+    start_time        TIMESTAMP(2) NOT NULL,
+    end_time          TIMESTAMP(2) NOT NULL,
+    id_driver_vehicle NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE course ADD CONSTRAINT course_pk PRIMARY KEY ( id_course );
+
+CREATE TABLE course_stage (
+    id_course_stage   NUMERIC(4) NOT NULL,
+    stage             NUMERIC(3) NOT NULL,
+    arr_time          TIMESTAMP(1) NOT NULL,
+    dep_time          TIMESTAMP(1) NOT NULL,
+    charging_time     NUMERIC(5),
+    id_bus_stop_start NUMERIC(4) NOT NULL,
+    id_course         NUMERIC(4) NOT NULL,
+    id_bus_stop_end   NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE course_stage ADD CONSTRAINT course_stage_pk PRIMARY KEY ( id_course_stage );
+
+CREATE TABLE driver (
+    id_driver       NUMERIC(4) NOT NULL,
+    date_employment DATE NOT NULL,
+    id_user         NUMERIC(4) NOT NULL
+);
+
+CREATE UNIQUE INDEX driver__idx ON
+    driver (
+        id_user
+    ASC );
+
+ALTER TABLE driver ADD CONSTRAINT driver_pk PRIMARY KEY ( id_driver );
+
+CREATE TABLE driver_vehicle (
+    id_driver_vehicle NUMERIC(4) NOT NULL,
+    id_driver         NUMERIC(4) NOT NULL,
+    id_vehicle        NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE driver_vehicle ADD CONSTRAINT driver_vehicle_pk PRIMARY KEY ( id_driver_vehicle );
+
+CREATE TABLE opinion (
+    id_opinion NUMERIC(4) NOT NULL,
+    content    VARCHAR(200) NOT NULL,
+    rating     NUMERIC(1),
+    id_client  NUMERIC(4) NOT NULL,
+    id_course  NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE opinion ADD CONSTRAINT opinion_pk PRIMARY KEY ( id_opinion );
+
+CREATE TABLE raports (
+/*#TODO: przetestować czy działa*/
+    id_raport SERIAL PRIMARY KEY,
+    content   VARCHAR(1024) NOT NULL
+);
+
+/*ALTER TABLE raports ADD CONSTRAINT raports_pk PRIMARY KEY ( id_raport );*/
+
+CREATE TABLE search_history (
+    id_history        NUMERIC(4) NOT NULL,
+    start_time        TIMESTAMP(2) NOT NULL,
+    end_time          TIMESTAMP(2) NOT NULL,
+    id_bus_stop_start NUMERIC(4) NOT NULL,
+    id_bus_stop_end   NUMERIC(4) NOT NULL,
+    id_client         NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE search_history ADD CONSTRAINT search_history_pk PRIMARY KEY ( id_history );
+
+CREATE TABLE simulation (
+    current_location NUMERIC(8) NOT NULL,
+    id_vehicle       NUMERIC(4) NOT NULL,
+    id_user          NUMERIC(4) NOT NULL,
+    number_free_seat NUMERIC(4) NOT NULL
+);
+
+CREATE TABLE tickets (
+    id_tickets    NUMERIC(4) NOT NULL,
+    name          VARCHAR(30) NOT NULL,
+    duration_time NUMERIC(4) NOT NULL,
+    price         NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE tickets ADD CONSTRAINT tickets_pk PRIMARY KEY ( id_tickets );
+
+CREATE TABLE tickets_client (
+    id_tickes_client   NUMERIC(4) NOT NULL,
+    time_to_end        TIMESTAMP(2) NOT NULL,
+    client_id_client   NUMERIC(4) NOT NULL,
+    tickets_id_tickets NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE tickets_client ADD CONSTRAINT tickets_client_pk PRIMARY KEY ( id_tickes_client );
+
+CREATE TABLE trav_ride (
+    id_trav_ride          NUMERIC(4) NOT NULL,
+    id_traveler           NUMERIC(4) NOT NULL,
+    id_course             NUMERIC(4),
+    id_course_stage_start NUMERIC(4) NOT NULL,
+    id_course_stage_end   NUMERIC(4) NOT NULL,
+    id_bus_stop_start     NUMERIC(4) NOT NULL,
+    id_bus_stop_end       NUMERIC(4) NOT NULL
+);
+
+CREATE UNIQUE INDEX trav_ride__idx ON
+    trav_ride (
+        id_traveler
+    ASC );
+
+ALTER TABLE trav_ride ADD CONSTRAINT trav_ride_pk PRIMARY KEY ( id_trav_ride );
+
+CREATE TABLE traveler (
+    id_traveler       NUMERIC(4) NOT NULL,
+    start_time        TIMESTAMP(2) NOT NULL,
+    stop_time         TIMESTAMP(2) NOT NULL,
+    client_id_client  NUMERIC(4) NOT NULL,
+    id_bus_stop_start NUMERIC(4) NOT NULL,
+    id_bus_stop_end   NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE traveler ADD CONSTRAINT traveler_pk PRIMARY KEY ( id_traveler );
+
+CREATE TABLE "user" (
+    id_user      NUMERIC(4) NOT NULL,
+    role         VARCHAR(30) NOT NULL,
+    first_name   VARCHAR(150) NOT NULL,
+    last_name    VARCHAR(150) NOT NULL,
+    phone_number NUMERIC(12) NOT NULL,
+    "email"     VARCHAR(150) NOT NULL,
+    username     VARCHAR(30) NOT NULL,
+    home_address VARCHAR(200) NOT NULL,
+    password     VARCHAR(128) NOT NULL,
+    last_login   TIMESTAMP(2) NOT NULL,
+    is_superuser BOOLEAN DEFAULT FALSE NOT NULL,
+    is_staff     BOOLEAN DEFAULT FALSE NOT NULL,
+    is_active    BOOLEAN DEFAULT TRUE NOT NULL,
+    date_joined  TIMESTAMP(2) NOT NULL
+);
+
+ALTER TABLE "user" ADD CONSTRAINT user_pk PRIMARY KEY ( id_user );
+
+CREATE TABLE veh_feature (
+    id_feature NUMERIC(4) NOT NULL,
+    name       VARCHAR(100) NOT NULL,
+    content    VARCHAR(100) NOT NULL
+);
+
+ALTER TABLE veh_feature ADD CONSTRAINT veh_feature_pk PRIMARY KEY ( id_feature );
+
+CREATE TABLE veh_feature_traveler (
+    id_veh_feature_traveler NUMERIC(4) NOT NULL,
+    id_feature              NUMERIC(4) NOT NULL,
+    id_traveler             NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE veh_feature_traveler ADD CONSTRAINT veh_feature_traveler_pk PRIMARY KEY ( id_veh_feature_traveler );
+
+CREATE TABLE vehicle (
+    id_vehicle            NUMERIC(4) NOT NULL,
+    nr_vehicle            NUMERIC(4) NOT NULL,
+    model                 VARCHAR(30) NOT NULL,
+    brand                 VARCHAR(30) NOT NULL,
+    date_purchase         DATE NOT NULL,
+    date_inspection       DATE NOT NULL,
+    max_number_passengers NUMERIC(2) NOT NULL,
+    battery_kwh           NUMERIC(5),
+    cons_kwh              NUMERIC(5)
+);
+
+ALTER TABLE vehicle ADD CONSTRAINT vehicle_pk PRIMARY KEY ( id_vehicle );
+
+CREATE TABLE vehicle_veh_feature (
+    id_vehicle_veh_feature NUMERIC(4) NOT NULL,
+    id_vehicle             NUMERIC(4) NOT NULL,
+    id_feature             NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE vehicle_veh_feature ADD CONSTRAINT vehicle_veh_feature_pk PRIMARY KEY ( id_vehicle_veh_feature );
+
+CREATE TABLE work_schedule (
+    id_work_shedule NUMERIC(4) NOT NULL,
+    id_course       NUMERIC(4) NOT NULL,
+    start_time      TIMESTAMP(2) NOT NULL,
+    end_time        TIMESTAMP(2) NOT NULL,
+    id_driver       NUMERIC(4) NOT NULL
+);
+
+ALTER TABLE work_schedule ADD CONSTRAINT work_schedule_pk PRIMARY KEY ( id_work_shedule );
+
+ALTER TABLE bus_stops_dist
+    ADD CONSTRAINT bus_stops_dist_bus_stop_fk FOREIGN KEY ( id_bus_stop_start )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE bus_stops_dist
+    ADD CONSTRAINT bus_stops_dist_bus_stop_fkv2 FOREIGN KEY ( id_bus_stop_end )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE bus_stops_time
+    ADD CONSTRAINT bus_stops_time_bus_stop_fk FOREIGN KEY ( id_bus_stop_start )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE bus_stops_time
+    ADD CONSTRAINT bus_stops_time_bus_stop_fkv2 FOREIGN KEY ( id_bus_stop_end )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE client_bus_stop
+    ADD CONSTRAINT client_bus_stop_bus_stop_fk FOREIGN KEY ( id_bus_stop )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE client_bus_stop
+    ADD CONSTRAINT client_bus_stop_client_fk FOREIGN KEY ( id_client )
+        REFERENCES client ( id_client );
+
+ALTER TABLE client
+    ADD CONSTRAINT client_user_fk FOREIGN KEY ( user_id_user )
+        REFERENCES "user" ( id_user );
+
+ALTER TABLE course
+    ADD CONSTRAINT course_driver_vehicle_fk FOREIGN KEY ( id_driver_vehicle )
+        REFERENCES driver_vehicle ( id_driver_vehicle );
+
+ALTER TABLE course_stage
+    ADD CONSTRAINT course_stage_bus_stop_fk FOREIGN KEY ( id_bus_stop_start )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE course_stage
+    ADD CONSTRAINT course_stage_bus_stop_fkv2 FOREIGN KEY ( id_bus_stop_end )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE course_stage
+    ADD CONSTRAINT course_stage_course_fk FOREIGN KEY ( id_course )
+        REFERENCES course ( id_course );
+
+ALTER TABLE driver
+    ADD CONSTRAINT driver_user_fk FOREIGN KEY ( id_user )
+        REFERENCES "user" ( id_user );
+
+ALTER TABLE driver_vehicle
+    ADD CONSTRAINT driver_vehicle_driver_fk FOREIGN KEY ( id_driver )
+        REFERENCES driver ( id_driver );
+
+ALTER TABLE driver_vehicle
+    ADD CONSTRAINT driver_vehicle_vehicle_fk FOREIGN KEY ( id_vehicle )
+        REFERENCES vehicle ( id_vehicle );
+
+ALTER TABLE opinion
+    ADD CONSTRAINT opinion_client_fk FOREIGN KEY ( id_client )
+        REFERENCES client ( id_client );
+
+ALTER TABLE opinion
+    ADD CONSTRAINT opinion_course_fk FOREIGN KEY ( id_course )
+        REFERENCES course ( id_course );
+
+ALTER TABLE search_history
+    ADD CONSTRAINT search_history_bus_stop_fk FOREIGN KEY ( id_bus_stop_start )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE search_history
+    ADD CONSTRAINT search_history_bus_stop_fkv2 FOREIGN KEY ( id_bus_stop_end )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE search_history
+    ADD CONSTRAINT search_history_client_fk FOREIGN KEY ( id_client )
+        REFERENCES client ( id_client );
+
+ALTER TABLE tickets_client
+    ADD CONSTRAINT tickets_client_client_fk FOREIGN KEY ( client_id_client )
+        REFERENCES client ( id_client );
+
+ALTER TABLE tickets_client
+    ADD CONSTRAINT tickets_client_tickets_fk FOREIGN KEY ( tickets_id_tickets )
+        REFERENCES tickets ( id_tickets );
+
+ALTER TABLE trav_ride
+    ADD CONSTRAINT trav_ride_bus_stop_fk FOREIGN KEY ( id_bus_stop_start )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE trav_ride
+    ADD CONSTRAINT trav_ride_bus_stop_fkv2 FOREIGN KEY ( id_bus_stop_end )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE trav_ride
+    ADD CONSTRAINT trav_ride_course_fk FOREIGN KEY ( id_course )
+        REFERENCES course ( id_course );
+
+ALTER TABLE trav_ride
+    ADD CONSTRAINT trav_ride_course_stage_fk FOREIGN KEY ( id_course_stage_end )
+        REFERENCES course_stage ( id_course_stage );
+
+ALTER TABLE trav_ride
+    ADD CONSTRAINT trav_ride_course_stage_fkv2 FOREIGN KEY ( id_course_stage_start )
+        REFERENCES course_stage ( id_course_stage );
+
+ALTER TABLE trav_ride
+    ADD CONSTRAINT trav_ride_traveler_fk FOREIGN KEY ( id_traveler )
+        REFERENCES traveler ( id_traveler );
+
+ALTER TABLE traveler
+    ADD CONSTRAINT traveler_bus_stop_fk FOREIGN KEY ( id_bus_stop_start )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE traveler
+    ADD CONSTRAINT traveler_bus_stop_fkv2 FOREIGN KEY ( id_bus_stop_end )
+        REFERENCES bus_stop ( id_bus_stop );
+
+ALTER TABLE traveler
+    ADD CONSTRAINT traveler_client_fk FOREIGN KEY ( client_id_client )
+        REFERENCES client ( id_client );
+
+ALTER TABLE veh_feature_traveler
+    ADD CONSTRAINT veh_feature_traveler_traveler_fk FOREIGN KEY ( id_traveler )
+        REFERENCES traveler ( id_traveler );
+
+ALTER TABLE veh_feature_traveler
+    ADD CONSTRAINT veh_feature_traveler_veh_feature_fk FOREIGN KEY ( id_feature )
+        REFERENCES veh_feature ( id_feature );
+
+ALTER TABLE vehicle_veh_feature
+    ADD CONSTRAINT vehicle_veh_feature_veh_feature_fk FOREIGN KEY ( id_feature )
+        REFERENCES veh_feature ( id_feature );
+
+ALTER TABLE vehicle_veh_feature
+    ADD CONSTRAINT vehicle_veh_feature_vehicle_fk FOREIGN KEY ( id_vehicle )
+        REFERENCES vehicle ( id_vehicle );
+
+ALTER TABLE work_schedule
+    ADD CONSTRAINT work_schedule_driver_fk FOREIGN KEY ( id_driver )
+        REFERENCES driver ( id_driver );

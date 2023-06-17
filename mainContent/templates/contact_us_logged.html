@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>TransitGo - Skontaktuj się z nami</title>
+
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1"/>
+
+	<link rel="stylesheet" href="{% static 'css/log_style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/media.css' %}"/>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+</head>
+<body>
+
+	<main>
+		<div class="pojemnik">
+			<img src="{% static 'images/TransitGo.png' %}" alt="TransitGo" width="250px" height="250px" id="logo"/>
+
+			<h1>Skontaktuj się z nami</h1>
+			<p>W razie jakichkolwiek pytań lub problemów, skontaktuj się z naszym zespołem.</p>
+
+			<form id="Form_contact" action="{% url 'contact_us' %}" method="post">
+                {% csrf_token %}
+
+				<div class="group">
+                    <textarea name="message" rows="6" cols="40" required placeholder="Wiadomość"></textarea>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+				<div class="group">
+				    <button type="submit">Wyślij</button>
+				</div>
+			</form>
+
+			<p>Powrót do <a href="{% url 'base' %}" class="Link">strony głównej</a></p>
+		</div>
+	</main>
+
+</body>
+</html>

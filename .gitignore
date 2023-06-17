@@ -1,0 +1,9 @@
+
+.idea/
+TransitGo/__pycache__/__init__.cpython-39.pyc
+*.pyc
+__pycache__/
+*.pyc
+mainContent/__pycache__/views.cpython-311.pyc
+TransitGo/__pycache__/settings.cpython-311.pyc
+TransitGo/__pycache__/urls.cpython-311.pyc

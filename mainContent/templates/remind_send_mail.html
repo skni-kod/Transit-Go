@@ -1,0 +1,19 @@
+{% extends 'remind.html' %}
+{% load static %}
+
+{% block remind%}
+    <div class = "pojemnik">
+        <img src = "{% static 'images/Napis.png' %}" alt = "TransitGo" width = "300px" height = "300px" style="margin-bottom: 40px" id = "logo"/>
+        <form id = "Form_rem_mail">
+            <div class="group">
+                <input type="email" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Podaj email</label>
+            </div>
+            <div class="group">
+                <button type = "submit"> Wyślij email </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

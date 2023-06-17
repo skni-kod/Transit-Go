@@ -1,0 +1,205 @@
+{% load static %}
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url('/static/images/tlo.png');
+	background-size: cover;
+}
+
+main{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pojemnik{
+	padding: 5px 35px 30px 35px;
+	background-color: #fff;
+	border: 2px solid #6883BB;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: auto;
+}
+
+#logo{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 100%;
+	height: auto;
+}
+
+/*Formularz*/
+form{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.group{
+    position: relative;
+	margin-bottom: 35px;
+}
+
+.group:last-child{  
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Do przeniesienia - error dla zlego hasla lub eamil*/
+.Error_list{
+    border-radius: 8px;
+    border: 2px solid #5264AE;
+    margin: 6px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    -webkit-box-shadow: 0px 0px 16px -6px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 0px 16px -6px rgba(66, 68, 90, 1);
+	box-shadow: 0px 0px 16px -6px rgba(66, 68, 90, 1);
+	font-weight: bold;
+}
+
+.Error_list > li{
+    font-size: 16px;
+}
+
+.Error_list > li a{
+    text-decoration: none;
+    color: #EE0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 180px;
+    height: 45px;
+    margin-bottom: 3px;
+	font-weight: bold;
+}
+
+.try_again{
+    color: #7994CC;
+}
+
+.Error_list > li::after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid rgb(213, 213, 213);
+    border-left: 1px solid rgb(213, 213, 213);
+    border-left: 2px solid #5264AE;
+    border-top: 2px solid #5264AE;
+    left: 50%;
+    top: 56px;
+    transform: translate(-50%, -9px) rotate(45deg);
+    background-color: #fff;
+}
+
+input{
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 300px;
+	border: none;
+	border-bottom: 1px solid #6883BB;
+	box-sizing: border-box;
+	color: #5264AE;
+}
+
+input:focus{ 
+	outline: none; 
+}
+
+label{
+	color: #6883BB; 
+	font-size: 18px;
+	position: absolute;
+	pointer-events: none;
+	font-weight: bold;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all; 
+	-moz-transition: 0.2s ease all; 
+	-webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label{
+	top: -20px;
+	font-size: 14px;
+	color: #5264AE;
+}
+
+.bar{
+	position: relative; 
+	display: block; 
+	width: 300px;
+}
+
+.bar:before, .bar:after{
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 1px; 
+	position: absolute;
+	background: #5264AE; 
+	transition: 0.2s ease all; 
+	-moz-transition: 0.2s ease all; 
+	-webkit-transition: 0.2s ease all;
+}
+
+.bar:before{
+	left:50%;
+}
+
+.bar:after{
+	right:50%; 
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+}
+
+button{
+	width: 300px;
+	height: 45px;
+	border-radius: 15px;
+	border: 2px solid #6883BB;
+	font-size: 18px;
+	font-weight: bold;
+	color: #5264AE;
+	background-color: #FFF;
+	transition: background-color 0.7s ease;
+	transition: color 0.7s ease;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: #5264AE;
+	border: none;
+	-webkit-box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	box-shadow: 0px 0px 18px -6px rgba(66, 68, 90, 1);
+	color: #FFF;
+	font-weight: bold;
+}
+
+.Link{
+	margin: 4px 0;
+	text-decoration: none;
+	color: #6883BB;
+	font-weight: 700;
+	transition: background-color 0.2s ease;
+	transition: color 0.2s ease;
+}
+
+.Link:hover{
+	color: #5264AE;
+	text-decoration: underline;
+}
+

@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title> TransitGo </title>
+
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1"/>
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/media.css' %}"/>
+	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+</head>
+<body>
+    <div id="user-data" data-user-id="{{ user.id_user }}"></div >
+	<header>
+		<img src = "{% static 'images/Napis.png' %}" id ="logo"/>
+		<nav class="Main_nav">
+			<div class="top_nav_left">
+				<a onclick="showAside()"> Zamów przejazd </a>
+				<a onclick="showClosestBusStop()"> Najbliższe przystanki </a>
+			</div>
+		</nav>
+        {% block div %}
+		<div class="top_nav">
+			<div class = "Main_dropdown hover">
+				<a href="{% url 'login' %}"><span class="material-symbols-outlined" style = "font-size: 30px"> person </span></a>
+				<ul>
+					<li><a href="{% url 'login' %}">Zaloguj się</a></li>
+					<li><a href="{% url 'register' %}">Zarejestruj się</a></li>
+				</ul>
+			</div>
+		</div>
+        {% endblock %}
+	</header>
+	<main>
+		<div id="map"></div>
+		<nav class = "notifications">
+			<a onclick = "showAsideNotifications()"><span class="material-symbols-outlined" id="Bell"> notifications </span></a>
+		</nav>
+	</main>
+    <script>
+      var apiUrl = '{% url "api_base_url" %}';  // Pobierz wartość API_BASE_URL z widoku "api_base_url"
+    </script>
+	{%block test%}
+	<aside id="Hidden_content" style="display: ">
+		<div id="wrap_div">
+            <form onsubmit="orderRide(event);">
+              <div class="input-container">
+                <input type="text" id="start-input" placeholder="Przystanek początkowy"
+                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Przystanek początkowy'"
+                       oninput="filterBusStops('start-input')" onclick="showBusStops('start-input')"
+                       autocomplete="off">
+                <div id="bus-stop-list-start" class="bus-stop-list"></div>
+              </div>
+
+              <div class="input-container">
+                <input type="text" id="end-input" placeholder="Przystanek końcowy" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Przystanek końcowy'" oninput="filterBusStops('end-input')"
+                       onclick="showBusStops('end-input')" autocomplete="off">
+                <div id="bus-stop-list-end" class="bus-stop-list"></div>
+              </div>
+
+              <button id="order_Bus" onclick="orderRide()" >Zamów przejazd</button>
+            </form>
+
+			<section id="order_info">
+				<div class="column">
+					<label for="departure_time" style="font-size: 15px; font-weight: bold;">Data odjazdu:</label>
+					<div class="ride_time"><input type="datetime-local" id="departure_time"></div> <button id="order_travel" onclick="showTravel()">Wyznacz trase</button>
+				</div>
+				<div class="column2">
+					<div class="equipment_col">
+						<h4>Wyposażenie</h4>
+						<ul>
+							<li onclick="toggleRadio('check1');">
+							  <input type="radio" id="check1" />
+							  <label>Klimatyzacja</label>
+							</li>
+							<li onclick="toggleRadio('check2');">
+							  <input type="radio" id="check2" />
+							  <label>Wi-Fi</label>
+							</li>
+							<li onclick="toggleRadio('check3');">
+							  <input type="radio" id="check3" />
+							  <label>Wejście USB</label>
+							</li>
+							<li onclick="toggleRadio('check4');">
+							  <input type="radio" id="check4" />
+							  <label>Miejsce dla inwalidów</label>
+							</li>
+							<li onclick="toggleRadio('check5');">
+							  <input type="radio" id="check5" />
+							  <label>Silnik elektryczny</label>
+							</li>
+							<script>
+							  function toggleRadio(id) {
+								var radio = document.getElementById(id);
+								radio.checked = !radio.checked;
+							  }
+							</script>
+						</ul>
+					</div>
+				</div>
+				<div class="column2">
+					<div class="equipment_col">
+						<h4>Bilety</h4>
+						<ul>
+							<li onclick="document.getElementById('ticket1').checked = !document.getElementById('ticket1').checked;"><input type="radio" id="ticket1" name="option"><label>Miesięczny</label></li>
+							<li onclick="document.getElementById('ticket2').checked = !document.getElementById('ticket2').checked;"><input type="radio" id="ticket2" name="option"><label>Jednorazowy</label></li>
+							<li onclick="document.getElementById('ticket3').checked = !document.getElementById('ticket3').checked;"><input type="radio" id="ticket3" name="option"><label>Zapłać teraz</label></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+	</aside>
+	{%endblock%}
+    <aside id="Hidden_BusStop" style="display: none">
+      <div class="button-wrapper">
+        <button class="clear-button" onclick="clearRoute()">Wyczyść trasę</button>
+        <div id="bus-stops"></div>
+      </div>
+    </aside>
+	<aside id="Hidden_notifications" style = "display: none">
+        {% if user.is_authenticated %}
+            <script>
+                window.onload = function() {
+                    checkTime();
+                    setInterval(function() {
+                    checkTime();
+                    }, 60000); }
+            </script>
+        {% else %}
+            <div class="notification-container">
+				<div class="notification">
+					<a href="{% url 'register' %}">Witaj w TransitGo! Zarejestruj się</a>
+				</div>
+				<div class="notification">
+					<a href="{% url 'login' %}">Posiadasz już konto? Zaloguj się</a>
+				</div>
+            </div>
+            <script>
+                window.onload = function() {startBlinking();}
+            </script>
+        {% endif %}
+	</aside>
+	{% block foot%}
+	<footer>
+		<div class="dropdown hover">
+			<a href="#">Pomoc</a>
+			<ul>
+				<li><a href="{% url 'report_unlogged' %}">Zgłoś błąd</a></li>
+				<li><a href="{% url 'contact_us' %}">Skontakuj się z nami</a></li>
+			</ul>
+		</div>
+	</footer>
+	{%endblock%}
+
+	<script src="{% static 'js/map.js' %}" ></script>
+	<script src="{% static 'js/travel.js' %}" ></script>
+	<script src="{% static 'js/script.js' %}" ></script>
+    <script src="{% static 'js/ride_request.js' %}"></script>
+</body>
+</html>

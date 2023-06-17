@@ -1,0 +1,213 @@
+INSERT INTO bus_stop VALUES (1, '21N', 'Rzeszów', 'Armii Krajowej hotel 04', 50.01869, 22.026229999999998, '0', 0, 180);
+INSERT INTO bus_stop VALUES (2, '166N', 'Rzeszów', 'Armii Krajowej Skarbiec 07', 50.031659999999995, 22.0335, '0', 0, 180);
+INSERT INTO bus_stop VALUES (3, '15N', 'Rzeszów', 'Armii Krajowej szpital 10', 50.03452, 22.03343, '0', 0, 180);
+INSERT INTO bus_stop VALUES (4, '1F', 'Rzeszów', 'Bat. Chłopskich / Dąbrowskiego 02', 50.02271, 21.98248, '0', 0, 180);
+INSERT INTO bus_stop VALUES (5, '2F', 'Rzeszów', 'Bat. Chłopskich / Podkarpacka 01', 50.02329, 21.980970000000003, '0', 0, 180);
+INSERT INTO bus_stop VALUES (6, '6B', 'Rzeszów', 'Cieplińskiego 01', 50.0391814192455, 21.998346447944602, '0', 0, 180);
+INSERT INTO bus_stop VALUES (7, '5B', 'Rzeszów', 'Cieplińskiego 02', 50.03889, 21.99769, '0', 0, 180);
+INSERT INTO bus_stop VALUES (8, '13B', 'Rzeszów', 'Dąbrowskiego / Boh. Westerplatte 08', 50.023075056878206, 21.9851419329643, '0', 0, 180);
+INSERT INTO bus_stop VALUES (9, '14B', 'Rzeszów', 'Dąbrowskiego Instytut Muzyki 07', 50.02364, 21.986539999999998, '0', 0, 180);
+INSERT INTO bus_stop VALUES (10, '10B', 'Rzeszów', 'Dąbrowskiego park 01', 50.03056722042871, 21.9949668645859, '0', 0, 180);
+INSERT INTO bus_stop VALUES (11, '9B', 'Rzeszów', 'Dąbrowskiego park 02', 50.030440000000006, 21.99442, '0', 0, 180);
+INSERT INTO bus_stop VALUES (12, '1B', 'Rzeszów', 'Dworzec Główny PKP 01', 50.04229, 22.006829999999997, '0', 120, 3600);
+INSERT INTO bus_stop VALUES (13, '2B', 'Rzeszów', 'Dworzec Główny PKP 04', 50.04208, 22.00693, '0', 120, 3600);
+INSERT INTO bus_stop VALUES (14, '127A', 'Rzeszów', 'Kopisto U. Skarbowy 03', 50.02895102458, 22.009244263172196, '0', 0, 180);
+INSERT INTO bus_stop VALUES (15, '118A', 'Rzeszów', 'Kopisto Uniwersytet 02', 50.02877, 22.015520000000002, '0', 0, 180);
+INSERT INTO bus_stop VALUES (16, '13S', 'Rzeszów', 'Krakowska / Ceramiczna 12', 50.05936, 21.95413, '0', 0, 180);
+INSERT INTO bus_stop VALUES (17, '8S', 'Rzeszów', 'Krakowska / Mielecka 07', 50.0527, 21.9703, '0', 0, 180);
+INSERT INTO bus_stop VALUES (18, '10S', 'Rzeszów', 'Krakowska cmentarz 09', 50.05722, 21.9612, '0', 0, 180);
+INSERT INTO bus_stop VALUES (19, '7S', 'Rzeszów', 'Krakowska galeria 06', 50.04811, 21.97628, '0', 0, 180);
+INSERT INTO bus_stop VALUES (20, '17S', 'Rzeszów', 'Krakowska granica 18', 50.06426, 21.93372, '0', 80, 3600);
+INSERT INTO bus_stop VALUES (21, '3S', 'Rzeszów', 'Krakowska Jedn. Wojskowa 02', 50.04435, 21.985789999999998, '0', 0, 180);
+INSERT INTO bus_stop VALUES (22, '4S', 'Rzeszów', 'Krakowska szpital 03', 50.0457392339816, 21.980846375227, '0', 0, 180);
+INSERT INTO bus_stop VALUES (23, '40D', 'Rzeszów', 'Lwowska / Bałtycka 09', 50.038909999999994, 22.052310000000002, '0', 0, 180);
+INSERT INTO bus_stop VALUES (24, '29D', 'Rzeszów', 'Lwowska / Kr. Marysienki 10', 50.038790000000006, 22.05419, '0', 0, 180);
+INSERT INTO bus_stop VALUES (25, '4D', 'Rzeszów', 'Lwowska Jedn. Wojskowa 01', 50.03841, 22.02178, '0', 0, 180);
+INSERT INTO bus_stop VALUES (26, '1D', 'Rzeszów', 'Lwowska Jedn. Wojskowa 02', 50.0383114553232, 22.0197772979736, '0', 0, 180);
+INSERT INTO bus_stop VALUES (27, '36D', 'Rzeszów', 'Lwowska szpital 05', 50.03799, 22.0376, '0', 0, 180);
+INSERT INTO bus_stop VALUES (28, '25D', 'Rzeszów', 'Lwowska szpital 06', 50.03771, 22.0368, '0', 0, 180);
+INSERT INTO bus_stop VALUES (29, '98A', 'Rzeszów', 'Łukasiewicza pętla 08', 50.00358, 22.02938, '0', 80, 3600);
+INSERT INTO bus_stop VALUES (30, '4W', 'Rzeszów', 'Marszałkowska 01', 50.0455790458725, 21.9997224211693, '0', 0, 180);
+INSERT INTO bus_stop VALUES (31, '1W', 'Rzeszów', 'Marszałkowska 02', 50.0466564297962, 21.9997009634972, '0', 0, 180);
+INSERT INTO bus_stop VALUES (32, '6E', 'Rzeszów', 'Okulickiego / Wyzwolenia 05', 50.05532, 21.98798, '0', 0, 180);
+INSERT INTO bus_stop VALUES (33, '1E', 'Rzeszów', 'Okulickiego C. Handlowe 02', 50.04844, 21.98697, '0', 0, 180);
+INSERT INTO bus_stop VALUES (34, '48S', 'Rzeszów', 'Piłsudskiego U. Marszałkowski 05', 50.041486316751396, 21.9977322220802, '0', 0, 180);
+INSERT INTO bus_stop VALUES (35, '3C', 'Rzeszów', 'Piłsudskiego U. Wojewódzki 06', 50.04095, 22.001089999999998, '0', 0, 180);
+INSERT INTO bus_stop VALUES (36, '2D', 'Rzeszów', 'Piłsudskiego ZDZ 02', 50.039123, 22.013756, '0', 0, 180);
+INSERT INTO bus_stop VALUES (37, '2C', 'Rzeszów', 'Pl. Wolności 01', 50.0396861633642, 22.0089009404182, '0', 0, 180);
+INSERT INTO bus_stop VALUES (38, '20B', 'Rzeszów', 'Podkarpacka / Wetlińska 05', 50.0123086261215, 21.9689199328423, '0', 0, 180);
+INSERT INTO bus_stop VALUES (39, '21B', 'Rzeszów', 'Podkarpacka / Wetlińska 06', 50.01146575423179, 21.967366933822603, '0', 80, 3600);
+INSERT INTO bus_stop VALUES (40, '16B', 'Rzeszów', 'Podkarpacka Politechnika 01', 50.01981280909679, 21.9799116253853, '0', 0, 180);
+INSERT INTO bus_stop VALUES (41, '51A', 'Rzeszów', 'Podwisłocze / Powst. Warszawy 02', 50.02053, 22.00371, '0', 0, 180);
+INSERT INTO bus_stop VALUES (42, '57A', 'Rzeszów', 'Podwisłocze domki 01', 50.02397459178571, 22.0044887065887, '0', 0, 180);
+INSERT INTO bus_stop VALUES (43, '24A', 'Rzeszów', 'Powst. Warszawy / Hetmańska 03', 50.02037, 21.9931, '0', 0, 180);
+INSERT INTO bus_stop VALUES (44, '60A', 'Rzeszów', 'Powst. Warszawy / Rejtana 13', 50.01817, 22.01504, '0', 0, 180);
+INSERT INTO bus_stop VALUES (45, '63A', 'Rzeszów', 'Powst. Warszawy / Sikorskiego 12', 50.0176671529499, 22.0152926445007, '0', 0, 180);
+INSERT INTO bus_stop VALUES (46, '59A', 'Rzeszów', 'Powst. Warszawy Dom Studenta 08', 50.019459999999995, 22.00466, '0', 0, 180);
+INSERT INTO bus_stop VALUES (47, '56A', 'Rzeszów', 'Powst. Warszawy Dom Studenta 09', 50.019740000000006, 22.00515, '0', 0, 180);
+INSERT INTO bus_stop VALUES (48, '151A', 'Rzeszów', 'Powst. Warszawy Politechnika 04', 50.0201471436745, 21.988719999790202, '0', 0, 180);
+INSERT INTO bus_stop VALUES (49, '83A', 'Rzeszów', 'Rejtana / Armii Krajowej 12', 50.0195456844373, 22.017459869384798, '0', 0, 180);
+INSERT INTO bus_stop VALUES (50, '80A', 'Rzeszów', 'Rejtana / Kopisto 07', 50.027609999999996, 22.01657, '0', 0, 180);
+INSERT INTO bus_stop VALUES (51, '91A', 'Rzeszów', 'Rejtana / Kustronia 02', 50.0364750044729, 22.0169100165367, '0', 0, 180);
+INSERT INTO bus_stop VALUES (52, '144A', 'Rzeszów', 'Rejtana / Kustronia 03', 50.03520529710261, 22.0165157318115, '0', 0, 180);
+INSERT INTO bus_stop VALUES (53, '87A', 'Rzeszów', 'Rejtana Uniwersytet 06', 50.03021, 22.01711, '0', 0, 180);
+INSERT INTO bus_stop VALUES (54, '134A', 'Rzeszów', 'Sikorskiego / Powst. Warszawy 02', 50.0166, 22.01689, '0', 0, 180);
+INSERT INTO bus_stop VALUES (55, '95A', 'Rzeszów', 'Sikorskiego / Robotnicza 05', 50.001129999999996, 22.01801, '0', 0, 180);
+INSERT INTO bus_stop VALUES (56, '11F', 'Rzeszów', 'Witosa / Langiewicza 02', 50.03164, 21.97654, '0', 0, 180);
+INSERT INTO bus_stop VALUES (57, '14F', 'Rzeszów', 'Witosa / Panoramiczna 01', 50.033394570845395, 21.976218223571802, '0', 0, 180);
+INSERT INTO bus_stop VALUES (58, '1G', 'Rzeszów', 'Witosa / Solarza 07', 50.044540000000005, 21.98125, '0', 0, 180);
+INSERT INTO bus_stop VALUES (59, '4G', 'Rzeszów', 'Witosa Jedn. Wojskowa 08', 50.04412, 21.98191, '0', 0, 180);
+INSERT INTO bus_stop VALUES (60, '9E', 'Rzeszów', 'Wyzwolenia / Iranka-Osmeckiego 06', 50.05584, 21.9873, '0', 0, 180);
+INSERT INTO bus_stop VALUES (61, '15E', 'Rzeszów', 'Wyzwolenia / Krakowska 12', 50.05445, 21.9718, '0', 0, 180);
+INSERT INTO bus_stop VALUES (62, '16E', 'Rzeszów', 'Wyzwolenia / Mikołajczyka 09', 50.054641751848095, 21.973616480827303, '0', 0, 180);
+INSERT INTO bus_stop VALUES (63, '12E', 'Rzeszów', 'Wyzwolenia kościół 05', 50.055816230422494, 21.9852143526077, '0', 0, 180);
+INSERT INTO bus_stop VALUES (64, '7E', 'Rzeszów', 'Wyzwolenia WORD 04', 50.053233028484, 21.9974666833878, '0', 80, 3600);
+
+INSERT INTO "user" VALUES (1, 'driver', 'Karol', 'Santana', 777777777, 'mike@gmail.com', 'karol123', 'Rzeszow ul. Lubelska 62/11', 'golce123!', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (2, 'driver', 'Tomasz', 'Bekon', 111222333, 'tomasz@gmail.com', 'tomek88', 'Krosno ul. Krakowska 2/11', 'Kotek123', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (3, 'driver', 'Jarek', 'Mazur', 999888777, 'jarek@gmail.com', 'jarek89', 'Sanok ul. Starzenska 992', 'Haslo123', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (4, 'client', 'Roman', 'Szeligowski', 232323231, 'romen@gmail.com', 'romek22', 'Krakow ul. Rzeszowska 12/3', '123456789', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (5, 'client', 'Katarzyna', 'Dudek', 987654321, 'katarzyna2@gmail.com', 'kasia90', 'Rzeszow ul. Brzozowska 62a/11', 'P@ssw0rd', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (6, 'client', 'Marzena', 'Miazek', 123456789, 'marzena09@gmail.com', 'marzenka', 'Rzeszow ul. Jana Pawla 2g/1', 'Qwerty123', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (7, 'client', 'Tomek', 'Adam', 111333222, 'tomek@gmail.com', 'tomad', 'Rzeszow ul. Rejtana 62/11', 'Abc12345', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (8, 'client', 'Agnieszka', 'Gancarz', 222333111, 'agnieszka@gmail.com', 'agnes_g', 'Rzeszow ul. Brzozowska 2/89', 'Password1', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (9, 'client', 'Edyta', 'Mendyka', 333222444, 'edyt@gmail.com', 'edyta_m', 'Rzeszow ul. Rzeszowska 62/11', 'Polska2022', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (10, 'client', 'Robert', 'Filip', 999000888, 'robelt@gmail.com', 'robertf', 'Rzeszow ul. Lubelska 62/11', 'Hello123', current_timestamp, FALSE, FALSE, TRUE, current_timestamp);
+INSERT INTO "user" VALUES (11, 'admin', 'Adrian', 'W', 795254372, 'adi7878787@gmail.com', 'adias787','Rzeszow ul. Lubelska 62/11', 'asd123', current_timestamp, TRUE, TRUE, TRUE, current_timestamp);
+
+INSERT INTO client VALUES (1, 4);
+INSERT INTO client VALUES (2, 5);
+INSERT INTO client VALUES (3, 6);
+INSERT INTO client VALUES (4, 7);
+INSERT INTO client VALUES (5, 8);
+INSERT INTO client VALUES (6, 9);
+INSERT INTO client VALUES (7, 10);
+
+INSERT INTO driver VALUES (1, TO_DATE('28.04.2023', 'DD.MM.YYYY'),1);
+INSERT INTO driver VALUES (2, TO_DATE('28.04.2023', 'DD.MM.YYYY'),2);
+INSERT INTO driver VALUES (3, TO_DATE('29.04.2023', 'DD.MM.YYYY'),3);
+
+INSERT INTO vehicle VALUES (1,10,'Sprinter', 'Mercedes', TO_TIMESTAMP('17-04-2023','DD-MM-YYYY'), TO_TIMESTAMP('18-04-2023','DD-MM-YYYY'),9, 100, 10);
+INSERT INTO vehicle VALUES (2,20,'Sprinter', 'Mercedes', TO_TIMESTAMP('17-04-2023','DD-MM-YYYY'), TO_TIMESTAMP('18-04-2023','DD-MM-YYYY'),9, 100, 10);
+INSERT INTO vehicle VALUES (3,30,'Sprinter', 'Mercedes', TO_TIMESTAMP('17-04-2023','DD-MM-YYYY'), TO_TIMESTAMP('18-04-2023','DD-MM-YYYY'),9, 200, 12);
+INSERT INTO vehicle VALUES (4,40,'Sprinter', 'Mercedes', TO_TIMESTAMP('17-04-2023','DD-MM-YYYY'), TO_TIMESTAMP('18-04-2023','DD-MM-YYYY'),9, 200, 12);
+INSERT INTO vehicle VALUES (5,50,'Sprinter', 'Mercedes', TO_TIMESTAMP('17-04-2023','DD-MM-YYYY'), TO_TIMESTAMP('18-04-2023','DD-MM-YYYY'),9, NULL, NULL);
+
+INSERT INTO veh_feature VALUES (1, 'Klimatyzacja', 'System klimatyzacji w pojeździe.');
+INSERT INTO veh_feature VALUES (2, 'Wi-Fi', 'Bezprzewodowy dostęp do Internetu dla pasażerów.');
+INSERT INTO veh_feature VALUES (3, 'TV', 'Telewizor dla pasażerów.');
+INSERT INTO veh_feature VALUES (4, 'Ładowarki USB', 'Gniazdka USB do ładowania urządzeń elektronicznych dla pasażerów.');
+INSERT INTO veh_feature VALUES (5, 'Automat', 'Automat z przekąskami dla pasażerów');
+
+INSERT INTO search_history VALUES (1, TO_TIMESTAMP('2019-05-12 08:03:24','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2019-05-12 08:18:24','YYYY-MM-DD HH24:MI:SS'), 1, 9 , 2);
+INSERT INTO search_history VALUES (2, TO_TIMESTAMP('2021-02-03 12:12:28','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2021-02-03 12:36:05','YYYY-MM-DD HH24:MI:SS'), 2, 5 , 5);
+INSERT INTO search_history VALUES (3, TO_TIMESTAMP('2022-03-28 17:03:24','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2022-03-28 17:09:57','YYYY-MM-DD HH24:MI:SS'), 3, 10 , 1);
+INSERT INTO search_history VALUES (4, TO_TIMESTAMP('2023-01-01 00:00:01','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-01-01 00:15:01','YYYY-MM-DD HH24:MI:SS'), 1, 6 , 3);
+INSERT INTO search_history VALUES (5, TO_TIMESTAMP('2023-04-15 15:45:30','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-04-15 16:05:30','YYYY-MM-DD HH24:MI:SS'), 9, 10 , 4);
+INSERT INTO search_history VALUES (6, TO_TIMESTAMP('2023-05-02 09:30:00','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-05-02 09:40:00','YYYY-MM-DD HH24:MI:SS'), 7, 10 , 2);
+INSERT INTO search_history VALUES (7, TO_TIMESTAMP('2023-05-02 17:15:45','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-05-02 17:45:45','YYYY-MM-DD HH24:MI:SS'), 3, 8 , 5);
+INSERT INTO search_history VALUES (8, TO_TIMESTAMP('2023-05-03 08:30:00','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-05-03 09:00:00','YYYY-MM-DD HH24:MI:SS'), 4, 10 , 3);
+INSERT INTO search_history VALUES (9, TO_TIMESTAMP('2023-05-03 13:20:00','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-05-03 13:40:00','YYYY-MM-DD HH24:MI:SS'), 6, 1 , 4);
+INSERT INTO search_history VALUES (10, TO_TIMESTAMP('2023-05-03 19:00:00','YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-05-03 19:30:00','YYYY-MM-DD HH24:MI:SS'), 8, 2 , 2);
+
+INSERT INTO bus_stops_dist VALUES (5, 1, 2, 10, 'pon', TO_TIMESTAMP('1000-01-01 15:00','YYYY-MM-DD HH24:MI'));
+INSERT INTO bus_stops_dist VALUES (1, 1, 3, 4, 'wt', TO_TIMESTAMP('1000-01-01 11:00','YYYY-MM-DD HH24:MI'));
+INSERT INTO bus_stops_dist VALUES (2, 2, 3, 7, 'sr', TO_TIMESTAMP('1000-01-01 12:00','YYYY-MM-DD HH24:MI'));
+INSERT INTO bus_stops_dist VALUES (3, 4, 3, 2, 'czw', TO_TIMESTAMP('1000-01-01 13:00','YYYY-MM-DD HH24:MI'));
+INSERT INTO bus_stops_dist VALUES (4, 3, 3, 5, 'pt', TO_TIMESTAMP('1000-01-01 14:00','YYYY-MM-DD HH24:MI'));
+INSERT INTO bus_stops_dist VALUES (6, 5, 2, 1, 'sob', TO_TIMESTAMP('1000-01-01 16:00','YYYY-MM-DD HH24:MI'));
+INSERT INTO bus_stops_dist VALUES (7, 1, 4, 3, 'nie', TO_TIMESTAMP('1000-01-01 17:00','YYYY-MM-DD HH24:MI'));
+
+INSERT INTO bus_stops_time VALUES (1, 1, 2, 'pon', TO_TIMESTAMP('1000-01-01 11:00','YYYY-MM-DD HH24:MI'), 7);
+INSERT INTO bus_stops_time VALUES (2, 3, 2, 'wt', TO_TIMESTAMP('1000-01-01 12:00','YYYY-MM-DD HH24:MI'), 3);
+INSERT INTO bus_stops_time VALUES (3, 4, 2, 'sr', TO_TIMESTAMP('1000-01-01 13:00','YYYY-MM-DD HH24:MI'), 8);
+INSERT INTO bus_stops_time VALUES (4, 5, 2, 'czw', TO_TIMESTAMP('1000-01-01 14:00','YYYY-MM-DD HH24:MI'), 2);
+INSERT INTO bus_stops_time VALUES (5, 1, 3, 'pt', TO_TIMESTAMP('1000-01-01 15:00','YYYY-MM-DD HH24:MI'), 9);
+INSERT INTO bus_stops_time VALUES (6, 2, 8, 'sob', TO_TIMESTAMP('1000-01-01 16:00','YYYY-MM-DD HH24:MI'), 5);
+INSERT INTO bus_stops_time VALUES (7, 2, 3, 'nie', TO_TIMESTAMP('1000-01-01 17:00','YYYY-MM-DD HH24:MI'), 4);
+
+INSERT INTO client_bus_stop VALUES (1, 'dom', 3, 2);
+INSERT INTO client_bus_stop VALUES (2, 'praca', 4, 1);
+INSERT INTO client_bus_stop VALUES (3, 'dom', 5, 4);
+INSERT INTO client_bus_stop VALUES (4, 'domeczek', 5, 3);
+INSERT INTO client_bus_stop VALUES (5, 'robota', 1, 4);
+INSERT INTO client_bus_stop VALUES (6, 'szkoła', 9, 5);
+INSERT INTO client_bus_stop VALUES (7, 'sklep', 2, 4);
+INSERT INTO client_bus_stop VALUES (8, 'park', 8, 2);
+INSERT INTO client_bus_stop VALUES (9, 'teatr', 4, 1);
+INSERT INTO client_bus_stop VALUES (10, 'kino', 3, 5);
+
+INSERT INTO vehicle_veh_feature VALUES (1,2,5);
+INSERT INTO vehicle_veh_feature VALUES (2,1,3);
+INSERT INTO vehicle_veh_feature VALUES (3,3,2);
+INSERT INTO vehicle_veh_feature VALUES (4,5,4);
+INSERT INTO vehicle_veh_feature VALUES (5,4,1);
+
+INSERT INTO work_schedule VALUES (1, 1, TO_TIMESTAMP('2023-04-08 6:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-04-08 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 1);
+INSERT INTO work_schedule VALUES (2, 2, TO_TIMESTAMP('2023-04-08 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-04-08 23:00:00', 'YYYY-MM-DD HH24:MI:SS'), 2);
+INSERT INTO work_schedule VALUES (3, 3, TO_TIMESTAMP('2023-04-08 23:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-04-09 6:00:00', 'YYYY-MM-DD HH24:MI:SS'), 3);
+INSERT INTO work_schedule VALUES (4, 4, TO_TIMESTAMP('2023-04-09 6:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-04-09 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 1);
+INSERT INTO work_schedule VALUES (5, 5, TO_TIMESTAMP('2023-04-09 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-04-09 23:00:00', 'YYYY-MM-DD HH24:MI:SS'), 2);
+
+INSERT INTO driver_vehicle VALUES (1, 1, 1);
+INSERT INTO driver_vehicle VALUES (2, 2, 3);
+INSERT INTO driver_vehicle VALUES (3, 3, 5);
+INSERT INTO driver_vehicle VALUES (4, 1, 2);
+INSERT INTO driver_vehicle VALUES (5, 2, 4);
+
+INSERT INTO course VALUES (1,(TO_TIMESTAMP('2023-05-02 08:00','YYYY-MM-DD HH24:MI')),(TO_TIMESTAMP('2023-05-02 17:00','YYYY-MM-DD HH24:MI')),1);
+INSERT INTO course VALUES (2,(TO_TIMESTAMP('2023-05-03 09:00','YYYY-MM-DD HH24:MI')),(TO_TIMESTAMP('2023-05-03 17:00','YYYY-MM-DD HH24:MI')),2);
+INSERT INTO course VALUES (3,(TO_TIMESTAMP('2023-05-04 08:00','YYYY-MM-DD HH24:MI')),(TO_TIMESTAMP('2023-05-04 17:00','YYYY-MM-DD HH24:MI')),3);
+INSERT INTO course VALUES (4,(TO_TIMESTAMP('2023-05-05 10:00','YYYY-MM-DD HH24:MI')),(TO_TIMESTAMP('2023-05-05 17:00','YYYY-MM-DD HH24:MI')),1);
+INSERT INTO course VALUES (5,(TO_TIMESTAMP('2023-05-06 08:30','YYYY-MM-DD HH24:MI')),(TO_TIMESTAMP('2023-05-06 17:00','YYYY-MM-DD HH24:MI')),2);
+
+INSERT INTO course_stage VALUES(1, 4, (TO_TIMESTAMP('2023-04-08 11:00:00', 'YYYY-MM-DD HH24:MI:SS')), (TO_TIMESTAMP('2023-04-08 12:00:00', 'YYYY-MM-DD HH24:MI:SS')), 30, 2, 1, 3);
+INSERT INTO course_stage VALUES(2, 2, (TO_TIMESTAMP('2023-04-08 12:00:00', 'YYYY-MM-DD HH24:MI:SS')), (TO_TIMESTAMP('2023-04-08 13:00:00', 'YYYY-MM-DD HH24:MI:SS')), 45, 34, 5, 35);
+INSERT INTO course_stage VALUES(3, 6, (TO_TIMESTAMP('2023-04-08 13:00:00', 'YYYY-MM-DD HH24:MI:SS')), (TO_TIMESTAMP('2023-04-08 14:00:00', 'YYYY-MM-DD HH24:MI:SS')), 50, 31, 2, 32);
+INSERT INTO course_stage VALUES(4, 9, (TO_TIMESTAMP('2023-04-08 14:00:00', 'YYYY-MM-DD HH24:MI:SS')), (TO_TIMESTAMP('2023-04-08 15:00:00', 'YYYY-MM-DD HH24:MI:SS')), 20, 21, 3, 22);
+INSERT INTO course_stage VALUES(5, 3, (TO_TIMESTAMP('2023-04-08 15:00:00', 'YYYY-MM-DD HH24:MI:SS')), (TO_TIMESTAMP('2023-04-08 16:00:00', 'YYYY-MM-DD HH24:MI:SS')), 15, 16, 4, 17);
+
+INSERT INTO opinion VALUES (1, 'Nie było tragicznie, przynajmniej poprawnie', 3, 1, 2);
+INSERT INTO opinion VALUES (2, 'Miła obsługa i wygodny przejazd', 4, 2, 1);
+INSERT INTO opinion VALUES (3, 'Najlepszy serwis w moim życiu, szybko, tanio i przyjemnie!', 5, 3, 4);
+INSERT INTO opinion VALUES (4, 'Było poprawnie', 3, 4, 3);
+INSERT INTO opinion VALUES (5, 'Lepiej już wziąć taxi', 1, 5, 5);
+
+INSERT INTO traveler VALUES (1, TO_TIMESTAMP('2023-05-22 10:13', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 10:50', 'YYYY-MM-DD HH24:MI'), 1, 1, 13);
+INSERT INTO traveler VALUES (2, TO_TIMESTAMP('2023-05-22 15:10', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 16:00', 'YYYY-MM-DD HH24:MI'), 2, 6, 8);
+INSERT INTO traveler VALUES (3, TO_TIMESTAMP('2023-05-22 11:05', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 11:20', 'YYYY-MM-DD HH24:MI'), 3, 18, 12);
+INSERT INTO traveler VALUES (4, TO_TIMESTAMP('2023-05-22 15:55', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 16:45', 'YYYY-MM-DD HH24:MI'), 4, 24, 32);
+INSERT INTO traveler VALUES (5, TO_TIMESTAMP('2023-05-22 12:00', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 12:30', 'YYYY-MM-DD HH24:MI'), 4, 32, 13);
+INSERT INTO traveler VALUES (6, TO_TIMESTAMP('2023-05-22 10:08', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 10:43', 'YYYY-MM-DD HH24:MI'), 5, 4, 11);
+INSERT INTO traveler VALUES (7, TO_TIMESTAMP('2023-05-23 11:10', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 11:50', 'YYYY-MM-DD HH24:MI'), 6, 9, 1);
+INSERT INTO traveler VALUES (8, TO_TIMESTAMP('2023-05-23 09:10', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 09:55', 'YYYY-MM-DD HH24:MI'), 7, 16, 31);
+INSERT INTO traveler VALUES (9, TO_TIMESTAMP('2023-05-23 07:05', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 07:55', 'YYYY-MM-DD HH24:MI'), 3, 20, 12);
+INSERT INTO traveler VALUES (10, TO_TIMESTAMP('2023-05-23 22:45', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 23:30', 'YYYY-MM-DD HH24:MI'), 1, 12, 7);
+INSERT INTO traveler VALUES (11, TO_TIMESTAMP('2023-05-23 21:00', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 21:30', 'YYYY-MM-DD HH24:MI'), 4, 17, 3);
+INSERT INTO traveler VALUES (12, TO_TIMESTAMP('2023-05-23 17:45', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 18:10', 'YYYY-MM-DD HH24:MI'), 2, 34, 21);
+INSERT INTO traveler VALUES (13, TO_TIMESTAMP('2023-05-22 16:30', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 17:15', 'YYYY-MM-DD HH24:MI'), 3, 6, 10);
+INSERT INTO traveler VALUES (14, TO_TIMESTAMP('2023-05-22 20:00', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 20:25', 'YYYY-MM-DD HH24:MI'), 2, 13, 16);
+INSERT INTO traveler VALUES (15, TO_TIMESTAMP('2023-05-22 06:45', 'YYYY-MM-DD HH24:MI'), TO_TIMESTAMP('2023-05-22 07:25', 'YYYY-MM-DD HH24:MI'), 1, 12, 18);
+
+INSERT INTO trav_ride VALUES (1, 1, 2, 2, 3, 5, 12);
+INSERT INTO trav_ride VALUES (2, 3, 1, 1, 5, 34, 15);
+INSERT INTO trav_ride VALUES (3, 2, 3, 1, 4, 8, 12);
+INSERT INTO trav_ride VALUES (4, 10, 5, 3, 5, 35, 7);
+INSERT INTO trav_ride VALUES (5, 9, 4, 5, 2, 12, 3);
+
+INSERT INTO veh_feature_traveler VALUES (1, 2, 3);
+INSERT INTO veh_feature_traveler VALUES (2, 4, 3);
+INSERT INTO veh_feature_traveler VALUES (3, 2, 1);
+INSERT INTO veh_feature_traveler VALUES (4, 1, 4);
+INSERT INTO veh_feature_traveler VALUES (5, 3, 5);
+
+
+insert into tickets_client values(1,TO_TIMESTAMP('2023-09-13 15:00','YYYY-MM-DD HH24:MI'), 4, 1);
+insert into tickets_client values(2,TO_TIMESTAMP('2025-09-13 15:00','YYYY-MM-DD HH24:MI'), 4, 2);
+insert into tickets_client values(3,TO_TIMESTAMP('2025-09-13 15:00','YYYY-MM-DD HH24:MI'), 4, 2);
+insert into tickets_client values(4,TO_TIMESTAMP('2025-09-13 15:00','YYYY-MM-DD HH24:MI'), 4, 2);
+insert into tickets_client values(5,TO_TIMESTAMP('2025-09-13 15:00','YYYY-MM-DD HH24:MI'), 4, 2);
+insert into tickets_client values(6,TO_TIMESTAMP('2025-09-13 15:00','YYYY-MM-DD HH24:MI'), 4, 2);
+
+insert into tickets values(1,'miesieczny', 30, 100)
+insert into tickets values(2,'jednorazowy',9999,3)

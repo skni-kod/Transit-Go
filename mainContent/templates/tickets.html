@@ -1,0 +1,15 @@
+{% extends 'user_profile.html' %}
+{% load static %}
+
+{% block dane %}
+    <section id="content">
+        <header>
+            <h2>Bilety</h2>
+            <a href="{% url 'TransitGoLogged'%}">Powrót</a>
+        </header>
+        <section id="tickets_info">
+            <a href="{% url 'buy_tickets' %}" class="tickets_option"><img src = "{% static 'images/tickets.png' %}" class="background_img"/> <p>Bilety</p> </a>
+            <a href="" class="tickets_option"><img src = "{% static 'images/dollar.png' %}" class="background_img"/> <p>Zniżki</p> </a>
+        </section>
+    </section>
+{% endblock %}

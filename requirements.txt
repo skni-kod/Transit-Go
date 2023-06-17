@@ -1,0 +1,8 @@
+Django==4.2.1
+djangorestframework==3.14.0
+paramiko==3.1.0
+pip==23.1.2
+psycopg2==2.9.6
+sshtunnel==0.4.0
+djangorestframework-simplejwt==5.2.2
+requests==2.31.0

@@ -1,0 +1,70 @@
+{% extends 'user_profile.html' %}
+{% load static %}
+
+{% block regulations %}
+<main>
+    <section id="container_regulations">
+    <aside>
+        <div class="group">
+            <ul> <a href="{% url 'user_profile' %}"><h2>Mój profil</h2></a>
+                <li><a href="{% url 'user_profile' %}">Dane konta</a></li>
+                <li><a href="{% url 'change_password' %}">Zmiana hasła</a></li>
+                <li><a href="{% url 'tickets' %}">Bilety</a></li>
+                <li><a href="{% url 'trip_history' %}">Historia przejazdów</a></li>
+                <li><a href="{% url 'favorite_BusStop' %}">Ulubione przystanki</a></li>
+            </ul>
+        </div>
+        <div class="group">
+            <ul> <a href=""><h2>Informacje</h2></a>
+                <li><a href="{% url 'about_us' %}">O nas</a></li>
+                <li><a href="{% url 'privacy' %}">Polityka prywatności</a></li>
+                <li><a href="{% url 'regulations'%}">Regulaminy</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="group">
+            <ul> <a href=""><h2>Pomoc techniczna</h2></a>
+                <li><a href="">Pomoc</a></li>
+                <li><a href="{% url 'report' %}">Zgłoś błąd</a></li>
+            </ul>
+        </div>
+    </aside>
+    <section id="content_regulation">
+        <header>
+            <h2>Polityka prywatności</h2>
+            <a href="{% url 'TransitGoLogged'%}">Powrót</a>
+        </header>
+        <article id="container_regulation">
+            <span>
+                Niniejsza Polityka Prywatności wyjaśnia, w jaki sposób aplikacja "TransitGo" gromadzi, przechowuje, wykorzystuje i chroni Twoje dane osobowe.
+                Zachęcamy do dokładnego zapoznania się z poniższymi informacjami, abyś miał pełną świadomość, jakie dane są zbierane i w jaki sposób są wykorzystywane.</br></br>
+
+                <h2>1. Dane osobowe gromadzone przez aplikację:</h2>
+                <p class="regulations_text">a. Rejestracja i logowanie: Podczas rejestracji w aplikacji "TransitGo" będziesz musiał podać pewne dane osobowe, takie jak imię, nazwisko, adres e-mail i hasło. Te informacje są niezbędne do tworzenia i zarządzania Twoim kontem w aplikacji.</br>
+                b. Dane lokalizacyjne: W celu obsługi zamówień autobusów do konkretnego przystanku, aplikacja "TransitGo" może wymagać dostępu do Twoich danych lokalizacyjnych. Dane te są wykorzystywane tylko w celu zidentyfikowania Twojej lokalizacji i przekazania ich przewoźnikowi, aby możliwe było dostarczenie zamówionego autobusu na odpowiedni przystanek.</p>
+
+                <h2>2. Wykorzystanie danych osobowych:</h2>
+                <p class="regulations_text">a. Dostarczanie usług: Gromadzone dane osobowe są wykorzystywane w celu świadczenia usług związanych z zamawianiem autobusów do konkretnego przystanku. W szczególności, dane lokalizacyjne są przekazywane przewoźnikom w celu dostarczenia zamówionego autobusu.</br>
+                b. Komunikacja: Twój adres e-mail może być używany do przesyłania informacji dotyczących Twojego konta, zamówień, aktualizacji aplikacji lub innych istotnych powiadomień.</p>
+
+                <h2>3. Udostępnianie danych osobowych:</h2>
+                <p class="regulations_text">a. Przewoźnicy: Aby możliwe było dostarczenie zamówionego autobusu na odpowiedni przystanek, niektóre ze zgromadzonych danych, takie jak lokalizacja, mogą być udostępniane odpowiednim przewoźnikom. Przewoźnicy będą miały dostęp tylko do tych informacji, które są niezbędne do dostarczenia usługi.</br>
+                b. Przetwarzanie danych: W niektórych przypadkach, w celu obsługi płatności, bezpieczeństwa lub innych usług związanych z aplikacją, możemy korzystać z usług zewnętrznych dostawców, którzy będą przetwarzać Twoje dane osobowe na nasze zlecenie. Zapewniamy, że każdy dostawca, z którym współpracujemy, jest zobowiązany do zachowania poufności i bezpieczeństwa Twoich danych osobowych.</p>
+
+                <h2>4. Bezpieczeństwo danych:</h2>
+                <p class="regulations_text">a. Chronienie Twoich danych jest dla nas priorytetem. Stosujemy odpowiednie środki techniczne i organizacyjne, aby chronić Twoje dane osobowe przed nieautoryzowanym dostępem, utratą lub uszkodzeniem.</br>
+                b. W przypadku wystąpienia naruszenia bezpieczeństwa danych, podejmiemy wszelkie niezbędne działania, aby jak najszybciej powiadomić Cię o tym incydencie i podjąć odpowiednie kroki w celu minimalizacji potencjalnych szkód.</p>
+
+                <h2>5. Prawa użytkownika:</h2>
+                <p class="regulations_text">a. Masz prawo do żądania dostępu, poprawiania, usuwania lub ograniczenia przetwarzania swoich danych osobowych w dowolnym momencie.</br>
+                b. Jeśli masz pytania lub wątpliwości dotyczące swoich danych osobowych lub Polityki Prywatności, możesz skontaktować się z nami za pośrednictwem dostępnych w aplikacji kanałów kontaktowych.</p>
+
+                Pamiętaj, że korzystając z aplikacji "TransitGo", zgadzasz się na gromadzenie, przechowywanie i wykorzystywanie Twoich danych osobowych zgodnie z opisanymi powyżej
+                zasadami Polityki Prywatności. Zachowamy sobie prawo do zmiany niniejszej polityki w dowolnym momencie, a zaktualizowane zasady zostaną udostępnione w aplikacji.</br></br>
+
+                Ostatnia aktualizacja: [data]
+            </span>
+        </article>
+    </section>
+</main>
+{% endblock %}

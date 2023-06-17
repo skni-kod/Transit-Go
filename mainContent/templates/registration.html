@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title> TransitGo </title>
+
+    <meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1"/>
+
+    <link rel="stylesheet" href="{% static 'css/regi_style.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/media.css' %}"/>
+</head>
+<body>
+
+    <main>
+		<div class = "pojemnik_reg">
+			<a href="{% url 'base' %}" class = "Back_link"><img src="{% static 'images/Napis.png' %}" id="logo_reg"/></a>
+			<form id = "Form_reg">
+				<div class="group">
+				    <input type="text" required>
+				    <span class="highlight"></span>
+				    <span class="bar"></span>
+				    <label>Imie</label>
+				</div>
+
+				<div class="group">
+				    <input type="text" required>
+				    <span class="highlight"></span>
+				    <span class="bar"></span>
+				    <label>Nazwisko</label>
+				</div>
+
+				<div class="groupLine">
+				    <input type="tel" class = "input_tel" required>
+				    <span class="highlight"></span>
+				    <span class="bar_tel"></span>
+				    <label>Numer</label>
+
+					<select id="role" name="role">
+						<option value="Klient">Klinet</option>
+						<option value="Kierowca">Kierowca</option>
+					</select>
+				</div>
+
+				<div class="group">
+				    <input type="email" required>
+				    <span class="highlight"></span>
+				    <span class="bar_tel"></span>
+				    <label>Email</label>
+				</div>
+
+				<div class="group">
+				    <input type="password" required>
+				    <span class="highlight"></span>
+				    <span class="bar"></span>
+					<label>Hasło</label>
+				</div>
+
+				<div class="group">
+				    <input type="password" required>
+				    <span class="highlight"></span>
+				    <span class="bar"></span>
+					<label>Powtórz Hasło</label>
+				</div>
+
+				<div class="group">
+				    <button type = "submit"> Zarejestruj się </button>
+				</div>
+			</form>
+		</div>
+	</main>
+
+</body>
+</html>
